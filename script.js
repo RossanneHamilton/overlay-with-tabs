@@ -1,9 +1,11 @@
 let activeTab = null;
+
 // Make sure default tab is visible
 document.getElementById("defaultOpen").click();
+
 let chatbotOpen = false; // Track the chatbot's state
 
-// function for switching between tabs
+// Function for switching between tabs
 function openPage(pageName, elmnt, color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -11,19 +13,19 @@ function openPage(pageName, elmnt, color) {
         tabcontent[i].style.display = "none";
     }
 
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-        tablinks[i].style.color = "black";
-    }
-
     var pageElement = document.getElementById(pageName);
 
     if (pageElement === activeTab) {
-        activeTab.style.display = "none";
-        activeTab = null;
+        // Don't change appearance if clicking the active tab
+        pageElement.style.display = "block";
         off(); // Call off() to hide elements
     } else {
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+            tablinks[i].style.color = "black";
+        }
+
         elmnt.style.backgroundColor = color;
         elmnt.style.color = "black";
         pageElement.style.display = "block";
