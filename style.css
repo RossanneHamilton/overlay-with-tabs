@@ -1,10 +1,18 @@
-/* Set height of body and the document to 100% to enable "full page tabs" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body,
 html {
     height: 100%;
     margin: 0;
-    /* needs importing still */
-    font-family: Poppins; 
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font: 'poppins';
+}
+
+.submitButton {
+    font-family: FontAwesome;
 }
 
 #chatbotButton {
@@ -14,10 +22,21 @@ html {
     padding: 15px 15px;
 }
 
+#textPadding {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+textarea {
+    width: 90%;
+}
+
 /* Style tab links */
 .tablink {
     background-color: #e2e2e2;
     color: black;
+    font-family: 'Poppins', sans-serif;
     float: left;
     outline: none;
     border: none;
@@ -35,6 +54,9 @@ html {
 .tabs {
     border-radius: 6px;
     outline: #707070 solid 2px;
+    grid-area: 3 / 2 / 4 / 3;
+    display: none;
+    height: auto; /* Set height to auto for dynamic growth */
 }
 
 /* Style the tab content (and add height:100% for full page content) */

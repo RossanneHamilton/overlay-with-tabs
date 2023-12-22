@@ -15,25 +15,37 @@
         <div class="chatbotButton">
             <div>
                 <button id='chatbotButton' onclick="toggleChatbot()">
-                    <b>Our chatbot</b>
+                    <b>Our Chatbot</b>
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
         </div>
-        
+
         <div class="askAbout" id="askAbout">
         </div>
         <div class="askAboutText" id="askAboutText">
-            <h3>Ask about...</h3>
+            <h3>Ask us...</h3>
         </div>
         <!-- Tabbed section -->
         <div class="tabs" id="tabs">
-            <button class="tablink" onclick="openPage('bjss', this, 'white')">BJSS</button>
-            <button class="tablink" onclick="openPage('agile', this, 'white')" id="defaultOpen">Enterprise
+            <button class="tablink" onclick="openPage('bjss', this, 'white')" id="defaultOpen">BJSS</button>
+            <button class="tablink" onclick="openPage('agile', this, 'white')">Enterprise
                 Agile</button>
             <div id="bjss" class="tabcontent">
-                <h3>BJSS</h3>
-                <p>Content for BJSS</p>
+                <ul>
+                    <li><a href="#">What awards has BJSS won?</a></li>
+                    <li><a href="#">Tell me about your work with AI</a></li>
+                    <li><a href="#">What events do you have coming up?</a></li>
+                </ul>
+                <!-- form -->
+                <div id="textPadding">
+                    <form action="#" method="#">
+                        <p>Or type your own question here:</p>
+                        <textarea rows="5" cols="60" name="description">
+                        </textarea>
+                        <input value="&#xf1d8;" type="submit" class="submitButton">
+                    </form>
+                </div>
             </div>
             <div id="agile" class="tabcontent">
                 <h3>Enterprise Agile</h3>
