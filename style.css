@@ -7,7 +7,7 @@ html {
     font-family: Poppins; 
 }
 
-#chatbotbutton {
+#chatbotButton {
     background-color: #feb031;
     border-radius: 6px;
     border: none;
@@ -69,10 +69,15 @@ html {
 .askAbout {
     grid-area: 2 / 1 / 5 / 4;
     background-color: #e2e2e2;
+    display: none;
 }
 
-.askAboutText { grid-area: 2 / 2 / 3 / 3; }
+.askAboutText { 
+    grid-area: 2 / 2 / 3 / 3; 
+    display: none;
+}
 
 .tabs {
     grid-area: 3 / 2 / 4 / 3;
+    display: none;
 }

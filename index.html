@@ -11,18 +11,23 @@
 
 <body>
     <div class="container">
+        <!-- Chatbot button -->
         <div class="chatbotButton">
             <div>
-                <button id='chatbotbutton' onclick="on()">Our chatbot<i class="fa-solid fa-chevron-right"></i></button>
+                <button id='chatbotButton' onclick="toggleChatbot()">
+                    <b>Our chatbot</b>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </div>
-        <div class="askAbout">
+        
+        <div class="askAbout" id="askAbout">
         </div>
-        <div class="askAboutText">
-            <h2>Ask about...</h2>
+        <div class="askAboutText" id="askAboutText">
+            <h3>Ask about...</h3>
         </div>
         <!-- Tabbed section -->
-        <div class="tabs">
+        <div class="tabs" id="tabs">
             <button class="tablink" onclick="openPage('bjss', this, 'white')">BJSS</button>
             <button class="tablink" onclick="openPage('agile', this, 'white')" id="defaultOpen">Enterprise
                 Agile</button>
