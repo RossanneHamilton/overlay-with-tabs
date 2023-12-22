@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabbed Content Example</title>
-  <link rel="stylesheet" href="style.css"> <!-- Link to your style.css -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Content Example</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f9c02e6016.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <div class="container">
+        <div class="chatbotButton">
+            <div>
+                <button id='chatbotbutton' onclick="on()">Our chatbot<i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="askAbout">
+        </div>
+        <div class="askAboutText">
+            <h2>Ask about...</h2>
+        </div>
+        <!-- Tabbed section -->
+        <div class="tabs">
+            <button class="tablink" onclick="openPage('bjss', this, 'white')">BJSS</button>
+            <button class="tablink" onclick="openPage('agile', this, 'white')" id="defaultOpen">Enterprise
+                Agile</button>
+            <div id="bjss" class="tabcontent">
+                <h3>BJSS</h3>
+                <p>Content for BJSS</p>
+            </div>
+            <div id="agile" class="tabcontent">
+                <h3>Enterprise Agile</h3>
+                <p>Content for Enterprise Agile</p>
+            </div>
+        </div>
 
-  <!-- Your HTML content -->
-  <button class="tablink" onclick="openPage('bjss', this, 'white')">BJSS</button>
-  <button class="tablink" onclick="openPage('agile', this, 'white')" id="defaultOpen">Enterprise Agile</button>
-
-  <div id="bjss" class="tabcontent">
-    <h3>BJSS</h3>
-    <p>Content for BJSS</p>
-  </div>
-
-  <div id="agile" class="tabcontent">
-    <h3>Enterprise Agile</h3>
-    <p>Content for Enterprise Agile</p>
-  </div>
-
-  <script src="script.js"></script> <!-- Link to your script.js -->
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

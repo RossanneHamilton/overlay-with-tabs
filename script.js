@@ -10,7 +10,7 @@ function openPage(pageName, elmnt, color) {
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
-        tablinks[i].style.color = "white"; // Set text color back to white for all tabs
+        tablinks[i].style.color = "black"; // Set text color back to white for all tabs
     }
 
     // Show the specific tab content
